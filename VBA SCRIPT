@@ -1,0 +1,33 @@
+Sub stock_summary():
+
+Dim ws As Worksheet
+
+For Each ws In Worksheets
+
+ws.Activate
+
+ws.Range("I1").Value = "Ticker"
+ws.Range("J1").Value = "Total Stock Volume"
+ws.Range("K1").Value = "Yearly Change"
+ws.Range("L1").Value = "% Change"
+ws.Range("N1").Value = "Ticker"
+ws.Range("O1").Value = "Greatest % Increase"
+ws.Range("P1").Value = "Greatest % Decrease"
+ws.Range("Q1").Value = "Greatest Total Volume"
+
+Next
+
+Dim percent_change As Double
+Dim open_price As Double
+Dim close_price As Double
+Dim yearly_change As Double
+Dim ticker_count As Long
+Dim ticker_name As String
+Dim i As Long
+
+For i = 2 To RowCount
+       If Cells(i + 1, 1).Value <> Cells(i, 1).Value Then
+
+End Sub
+
+
